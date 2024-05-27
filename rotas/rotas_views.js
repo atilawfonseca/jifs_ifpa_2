@@ -4,11 +4,13 @@ const rotas = express.Router();
 
 rotas.get('/', async (req, res) => {
     try {
-        app.get('/', (req, res) => {
-            res.send('ola, mundo!');
-        })
         
+        res.render('index', {
+            title:'Página Inicial'
+        })
     } catch (error) {
-        res.json({message: error.message});
+        res.json({message: error.message})
     }
 })
+
+module.exports = rotas; 
