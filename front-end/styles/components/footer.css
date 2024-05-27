@@ -1,0 +1,23 @@
+.rodape {
+    background-color: var(--bg-nav-color);
+    padding: 1em 0px;
+}
+
+.rodape__iconee_list {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.rodape__iconee_list--link {
+    list-style: none;
+}
+.rodape__iconee_list--link i{
+    font-size: 1.5em;
+    color: white;
+}
+
+.rodape__text {
+    text-align: center;
+    color: white;
+
+}
