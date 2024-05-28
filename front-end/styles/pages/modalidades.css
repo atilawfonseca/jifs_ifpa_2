@@ -2,6 +2,10 @@
 .modalities__block {
     display: flex;
     flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    padding: 0px
+
     
 }
 .modalities__block li {
@@ -10,10 +14,12 @@
 .modalities__block li a{
     text-decoration: none;
     text-align: center;
-    color: rgb(61, 175, 61);
+    color: var(--btn-color);
+    width: 140px;
+    height: 140px;
 }
 .modalities__block li a:hover {
-    color: green;
+    color: rgb(0, 95, 0);
 }
 
 .modalities__block li a i{
@@ -23,3 +29,4 @@
 .modalities__block .card-title {
     margin-bottom: 0px;
 }
+
