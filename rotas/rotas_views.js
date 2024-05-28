@@ -13,4 +13,15 @@ rotas.get('/', async (req, res) => {
     }
 })
 
+rotas.get('/modalidades', async (req, res) => {
+    try{
+        res.render('modalidades', {
+            title: 'Modalidades'
+        })
+    }
+    catch(error){
+        res.json({message: error.message})
+    }
+})
+
 module.exports = rotas; 
