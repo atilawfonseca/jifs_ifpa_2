@@ -1,0 +1,8 @@
+AJUSTAR FUTURAMENTE
+ainda não consegui fazer com que o active seja alterado ao clicar nos elementos do menu...
+na prática quando o elemento "modalidade" é clicado o DOM recarrega toda a
+a página e o jquery perde sua 
+função. Isso acontece porque as páginas são recarregados pelo href. Dessa forma o DOM reinicia
+e o Jquery que que tinha removido o active, no recarregamento da página, volta o active 
+para o elemento que estava antes. 
+

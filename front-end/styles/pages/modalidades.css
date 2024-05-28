@@ -1,0 +1,25 @@
+
+.modalities__block {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.modalities__block li {
+    list-style: none;
+}
+.modalities__block li a{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(61, 175, 61);
+}
+.modalities__block li a:hover {
+    color: green;
+}
+
+.modalities__block li a i{
+    font-size: 2em;
+    padding-top: .5em;
+}
+.modalities__block .card-title {
+    margin-bottom: 0px;
+}
