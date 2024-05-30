@@ -14,6 +14,7 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'front-end')));
 
+//atualizar o projeto no github sem atualizar no vercel, como fazer isso. 
 
 //redefinindo a pasta views para ser encontrada pelo express
 app.set('views', path.join(__dirname, 'front-end', 'views'));
