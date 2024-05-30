@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 
+//DB_URL = mongodb://localhost:27017/db_jifs
+
 const app = express();
 const PORTA = process.env.PORT || 4000;
 
@@ -21,5 +23,7 @@ app.use('', require('./rotas/rotas_views'));
 
 
 app.listen(PORTA, ()=> {
-    console.log(`Servidor iniciado na porta http://localhost:${PORTA}`)
+    console.log(`Servidor iniciado na porta ${PORTA}`)
 })
+//para funcionar na vercel alterar localhost
+//console.log(`Servidor iniciado na porta http://localhost:${PORTA}`)
