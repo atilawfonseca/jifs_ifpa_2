@@ -24,4 +24,15 @@ rotas.get('/modalidades', async (req, res) => {
     }
 })
 
+rotas.get('/login', async (req, res) => {
+    try{
+        res.render('login', {
+            title: 'Login'
+        })
+    }
+    catch(error){
+        res.json({message: error.message})
+    }
+})
+
 module.exports = rotas; 

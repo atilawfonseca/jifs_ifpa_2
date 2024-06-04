@@ -2,11 +2,20 @@
 @import url('./components/principal.css');
 @import url('./components/footer.css');
 @import url('./pages/modalidades.css');
+@import url('./pages/login.css');
 
 :root {
     --bg-nav-color: #2f9e41; 
     --btn-color: rgb(61, 175, 61);
 }
 
+.btn-green {
+    background-color: var(--bg-nav-color);
+    color: white;
+}
+.btn-green:hover {
+    background-color: #3ac751;
+    color: white;
+} 
 
 

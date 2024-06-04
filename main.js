@@ -24,7 +24,9 @@ app.use('', require('./rotas/rotas_views'));
 
 
 app.listen(PORTA, ()=> {
-    console.log(`Servidor iniciado na porta ${PORTA}`)
+    console.log(`Servidor iniciado na porta http://localhost:${PORTA}`)
 })
 //para funcionar na vercel alterar localhost
 //console.log(`Servidor iniciado na porta http://localhost:${PORTA}`)
+
+//quando for colocar pra subir no vercel tem que colocar só a porta, tirar o local host
