@@ -1,0 +1,12 @@
+.login-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+}
+.login-cadastro a {
+    text-decoration: none;
+    text-transform: uppercase;
+    
+
+}
