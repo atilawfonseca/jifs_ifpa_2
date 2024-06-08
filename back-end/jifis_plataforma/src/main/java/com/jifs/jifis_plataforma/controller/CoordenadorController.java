@@ -9,9 +9,10 @@ import com.jifs.jifis_plataforma.services.CoordenadoresService;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
-
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -30,6 +31,11 @@ public CoordenadorController(CoordenadoresService service) {
 @PostMapping
 public ResponseEntity<Coordenador> cadastrarNovoCoordenador(@RequestBody Coordenador coordenador){
     return ResponseEntity.status(HttpStatus.CREATED).body(service.cadastrarNovoCoordenador(coordenador));
+}
+
+@GetMapping("/{id}")
+public ResponseEntity<Coordenador> buscarCoordenadorPorSiape(@PathVariable String id){
+    return ResponseEntity.status(HttpStatus.OK).body(service.buscarCoordenadorPorSiape(id));
 }
 
 @GetMapping 

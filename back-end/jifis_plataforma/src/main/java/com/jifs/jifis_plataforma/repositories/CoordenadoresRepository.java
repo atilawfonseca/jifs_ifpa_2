@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.jifs.jifis_plataforma.model.Coordenador;
 
 @Repository
-public interface CoordenadoresRepository extends JpaRepository<Coordenador, Long> {
+public interface CoordenadoresRepository extends JpaRepository<Coordenador, String> {
     
 }
