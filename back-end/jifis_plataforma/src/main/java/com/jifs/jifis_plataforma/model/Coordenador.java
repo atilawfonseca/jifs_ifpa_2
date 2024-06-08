@@ -15,7 +15,7 @@ public class Coordenador {
     @Id
     @Column(nullable = false, unique = true)
     @Size(min = 7, max = 7, message = "O SIAPE deve conter 7 digitos") 
-    private Long siape;
+    private String siape;
 
     @NotBlank(message = "O nome de usuário é obrigatório")
     @Size(min = 3, max = 50)
@@ -38,7 +38,7 @@ public class Coordenador {
 
     }
 
-    public Coordenador(Long siape, String nome, String email,String senha, String telefone){
+    public Coordenador(String siape, String nome, String email,String senha, String telefone){
         this.siape = siape;
         this.nome = nome;
         this.email = email;
@@ -46,11 +46,11 @@ public class Coordenador {
         this.telefone = telefone;
     }
 
-    public Long getSiape() {
+    public String getSiape() {
         return siape;
     }
 
-    public void setSiape(Long siape) {
+    public void setSiape(String siape) {
         this.siape = siape;
     }
 
