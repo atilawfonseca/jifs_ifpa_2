@@ -13,7 +13,7 @@ import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "coordenadores")
-public class Coordenadores {
+public class Coordenador {
     
     @Id
     @Column(nullable = false, unique = true)
@@ -37,11 +37,11 @@ public class Coordenadores {
     @Column(nullable = false, unique = true)
     private String telefone;
 
-    public Coordenadores(){
+    public Coordenador(){
 
     }
 
-    public Coordenadores(Long siape, String nome, String email,String senha, String telefone){
+    public Coordenador(Long siape, String nome, String email,String senha, String telefone){
         this.siape = siape;
         this.nome = nome;
         this.email = email;
