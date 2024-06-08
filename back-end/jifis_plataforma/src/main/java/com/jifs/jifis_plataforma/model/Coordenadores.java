@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
@@ -15,8 +16,9 @@ import jakarta.validation.constraints.Size;
 public class Coordenadores {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(nullable = false, unique = true)
+    @Size(min = 7, max = 7, message = "O SIAPE deve conter 7 digitos") 
+    private Long siape;
 
     @NotBlank(message = "O nome de usuário é obrigatório")
     @Size(min = 3, max = 50)
@@ -35,19 +37,19 @@ public class Coordenadores {
 
     }
 
-    public Coordenadores(Long id, String nome, String email, String telefone){
-        this.id = id;
+    public Coordenadores(Long siape, String nome, String email, String telefone){
+        this.siape = siape;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
     }
 
     public Long getId() {
-        return id;
+        return siape;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.siape = id;
     }
 
     public String getNome() {
