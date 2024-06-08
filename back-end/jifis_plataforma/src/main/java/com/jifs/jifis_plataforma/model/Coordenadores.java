@@ -29,6 +29,10 @@ public class Coordenadores {
     @Column(nullable = false, unique = true)
     private String email;
 
+    @NotBlank(message = "A senha é obrigatória")
+    @Size(min = 8, message = "A senha deve conter no minimo 8 digitos")
+    private String senha;
+
     @NotBlank(message = "O telefone é obrigatório")
     @Column(nullable = false, unique = true)
     private String telefone;
@@ -37,19 +41,20 @@ public class Coordenadores {
 
     }
 
-    public Coordenadores(Long siape, String nome, String email, String telefone){
+    public Coordenadores(Long siape, String nome, String email,String senha, String telefone){
         this.siape = siape;
         this.nome = nome;
         this.email = email;
+        this.senha = senha;
         this.telefone = telefone;
     }
 
-    public Long getId() {
+    public Long getSiape() {
         return siape;
     }
 
-    public void setId(Long id) {
-        this.siape = id;
+    public void setSiape(Long siape) {
+        this.siape = siape;
     }
 
     public String getNome() {
@@ -68,6 +73,14 @@ public class Coordenadores {
         this.email = email;
     }
 
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public String getTelefone() {
         return telefone;
     }
@@ -76,6 +89,5 @@ public class Coordenadores {
         this.telefone = telefone;
     }
 
-    
-
+ 
 }
