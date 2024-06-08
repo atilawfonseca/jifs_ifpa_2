@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import com.jifs.jifis_plataforma.model.Coordenador;
 import com.jifs.jifis_plataforma.repositories.CoordenadoresRepository;
 
+import java.util.List;
+
 @Service
 public class CoordenadoresService {
     
@@ -16,6 +18,10 @@ public class CoordenadoresService {
 
     public Coordenador cadastrarNovoCoordenador(Coordenador Coordenador){
         return repository.save(Coordenador);
+    }
+
+    public List<Coordenador> listarTodosCoordenadores(){
+        return repository.findAll();
     }
 
 }
