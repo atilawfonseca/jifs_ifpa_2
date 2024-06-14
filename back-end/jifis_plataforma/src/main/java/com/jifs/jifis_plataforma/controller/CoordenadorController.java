@@ -27,7 +27,7 @@ public CoordenadorController(CoordenadoresService service) {
     this.service = service;
 }
 
-@PostMapping
+@PostMapping("/cadastrar")
 public ResponseEntity<Coordenador> cadastrarNovoCoordenador(@RequestBody Coordenador coordenador){
     return ResponseEntity.status(HttpStatus.CREATED).body(service.cadastrarNovoCoordenador(coordenador));
 }
@@ -37,7 +37,7 @@ public ResponseEntity<Coordenador> buscarCoordenadorPorSiape(@PathVariable Strin
     return ResponseEntity.status(HttpStatus.OK).body(service.buscarCoordenadorPorSiape(id));
 }
 
-@GetMapping 
+@GetMapping("/listarCoordenadores")
 public ResponseEntity<List<Coordenador>> listarTodosCoordenadores(){
     return ResponseEntity.status(HttpStatus.OK).body(service.listarTodosCoordenadores());
 }
