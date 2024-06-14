@@ -46,4 +46,15 @@ rotas.get('/cadastrar', async (req, res) => {
     }
 })
 
+rotas.get('/recuperar_senha', async (req, res) => {
+    try{
+        res.render('recuperar_senha', {
+            title: 'Recuperação de senha'
+        })
+    }
+    catch(error){
+        res.json({message: error.message})
+    }
+})
+
 module.exports = rotas; 
