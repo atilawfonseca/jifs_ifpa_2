@@ -1,1 +1,3 @@
 - [AJUSTAR] POSTS com o mesmo siape estao alterando usuario ja existente.
+
+- [ADICIONAR] Validação para o numero de telefone. - (00) 0 000000000
